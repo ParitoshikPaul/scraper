@@ -1,0 +1,48 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Jun 11 17:16:56 2019
+
+@author: paridhikumar
+"""
+class mod_str():
+    """ class asks user for string input and operation they want to perform on string.the operation is performed.
+    --Attributes--
+    message: the message the user inputs
+    op: the operation the user wants performed
+    """
+    message: str
+    op: str
+
+    def __init__(self) -> None:
+        a = str(input("Input your message: "))
+        self.message = a
+        b = str(input("What operation do you want to perform?: ")) ; print("Operations:","- length (returns lenght of message)", "- is uppercase","  (checks if all all alphabets in a message are uppercase alphabets.If the message contains at least one uppercase alphabet, it returns False.)","- uppercase (returns all alphabets in uppercase)","- is lowercase","  (checks if all all alphabets in a message are lowercase alphabets.If the message contains at least one uppercase alphabet, it returns False.)","- lowercase (returns all alphabets in lowercase)","- capitalize (converts first character to Capital Letter),"- title case (returns a title cased string)","- all alphabets (checks if all characters are alphabets)","- all numbers (checks if all characters in a string are numeric characters)","- all space (checks if there are only whitespace characters in the string)",sep="\n")
+        self.op = b
+    def operate(self):
+        if self.op == "length" :
+            return print(len(self.message))
+        elif self.op == "uppercase":
+            return print(self.message.upper())
+        elif self.op == "capitalize":
+            return print(self.message.capitalize())
+        elif self.op == "lowercase":
+            return print(self.message.lower())
+        elif self.op == "title case":
+            return print(self.message.title())
+        elif self.op == "all alphabets":
+            return print(self.message.isalpha())
+        elif self.op == "is lowercase":
+            return print(self.message.lower())
+        elif self.op == "is uppercase":
+            return print(self.message.isupper())
+        elif self.op == "all numbers":
+            return print(self.message.isnumeric())
+        elif self.op == "all space":
+            return print(self.message.isspace())
+        else:
+            return print("Invalid Operation")
+
+
+x = mod_str()
+x.operate()
