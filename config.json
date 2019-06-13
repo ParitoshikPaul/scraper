@@ -1,0 +1,20 @@
+{
+    "contact_email": "aarina.sonker@official.com", # Used when the contact email cannot be found otherwise
+    
+}
+"GitHub": [
+    {
+        "url": "https://github.com",    # GitHub.com or GitHub Enterprise URL to inventory
+        "token": "4b4a49414d871f25b74c5acc7f280f872815f7c6",                  # Private token for accessing this GitHub instance
+        "public_only": true,            # Only inventory public repositories
+        
+    }
+],
+"GitLab": [
+    {
+        "url": "https://gitlab.com",    # GitLab.com or hosted GitLab instance URL to inventory
+        "token": "4b4a49414d871f25b74c5acc7f280f872815f7c6",                  # Private token for accessing this GitHub instance
+        "fetch_languages": false,       # Include individual calls to API for language metadata. Very slow, so defaults to false. (eg, for 191 projects on internal server, 5 seconds for False, 12 minutes, 38 seconds for True)
+        
+    }
+]
