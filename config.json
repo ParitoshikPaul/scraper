@@ -1,10 +1,15 @@
 {
-    "contact_email": "aarina.sonker@official.com", # Used when the contact email cannot be found otherwise
-    
+    "contact": {
+                "URL": "https://github.com/Aarina726",
+                "email": "aarina.official@gmail.com"
+            },
+     "vcs": "git"
 }
 "GitHub": [
     {
-        "url": "https://github.com",    # GitHub.com or GitHub Enterprise URL to inventory
+        "url": "https://github.com",
+        "homepageURL": "https://github.com/Aarina726/scraper",
+        "repositoryURL": "https://github.com/Aarina726/scraper",
         "token": "4b4a49414d871f25b74c5acc7f280f872815f7c6",                  # Private token for accessing this GitHub instance
         "public_only": true,            # Only inventory public repositories
         
