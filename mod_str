@@ -1,48 +1,60 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Jun 11 17:16:56 2019
+    def operate(argument):
+        switcher = {
+            str({'operation': ' length (returns length of string)'}): print(len(self.message)),
+            str({'operation': ' uppercase (returns all alphabets in uppercase)'}): print(self.message.upper()),
+            str({'operation': ' capitalize (converts first character to Capital Letter)'}): print(self.message.capitalize()),
+            str({'operation': ' lowercase (returns all alphabets in lowercase)'}): print(self.message.lower()),
+            str({'operation': ' title case (returns a title cased string)'}): print(self.message.title()),
+            str({'operation': ' all alphabets (checks if all characters are alphabets)'}): print(self.message.isalpha()),
+            str({'operation': ' is lowercase (checks if all alphabets in a string are lowercase alphabets)'}): print(self.message.islower()),
+            str({'operation': ' is uppercase (checks whether or not all characters in a string are uppercased)'}): print(self.message.isupper()),
+            str({'operation': ' all numbers (checks if all characters in a string are numeric characters)'}): print(self.message.isnumeric()),
+            str({'operation': ' all space (checks if there are only whitespace characters in the string)'}): print(self.message.isspace()),
 
-@author: paridhikumar
-"""
-class mod_str():
-    """ class asks user for string input and operation they want to perform on string.the operation is performed.
-    --Attributes--
-    message: the message the user inputs
-    op: the operation the user wants performed
-    """
-    message: str
-    op: str
+        }
+        return switcher.get(argument, "Invalid Operation")
 
-    def __init__(self) -> None:
-        a = str(input("Input your message: "))
-        self.message = a
-        b = str(input("What operation do you want to perform?: ")) ; print("Operations:","- length (returns lenght of message)", "- is uppercase","  (checks if all all alphabets in a message are uppercase alphabets.If the message contains at least one uppercase alphabet, it returns False.)","- uppercase (returns all alphabets in uppercase)","- is lowercase","  (checks if all all alphabets in a message are lowercase alphabets.If the message contains at least one uppercase alphabet, it returns False.)","- lowercase (returns all alphabets in lowercase)","- capitalize (converts first character to Capital Letter),"- title case (returns a title cased string)","- all alphabets (checks if all characters are alphabets)","- all numbers (checks if all characters in a string are numeric characters)","- all space (checks if there are only whitespace characters in the string)",sep="\n")
-        self.op = b
-    def operate(self):
-        if self.op == "length" :
-            return print(len(self.message))
-        elif self.op == "uppercase":
-            return print(self.message.upper())
-        elif self.op == "capitalize":
-            return print(self.message.capitalize())
-        elif self.op == "lowercase":
-            return print(self.message.lower())
-        elif self.op == "title case":
-            return print(self.message.title())
-        elif self.op == "all alphabets":
-            return print(self.message.isalpha())
-        elif self.op == "is lowercase":
-            return print(self.message.lower())
-        elif self.op == "is uppercase":
-            return print(self.message.isupper())
-        elif self.op == "all numbers":
-            return print(self.message.isnumeric())
-        elif self.op == "all space":
-            return print(self.message.isspace())
-        else:
-            return print("Invalid Operation")
+    def ques(self) -> str:
+        questions = [
+            inquirer.List("operation",
+                          message="What operation would you like to perform?: ",
+                          choices=[" length (returns length of string)",
+                                   " is uppercase (checks whether or not all characters in a string are uppercased)",
+                                   " uppercase (returns all alphabets in uppercase)",
+                                   " is lowercase (checks if all alphabets in a string are lowercase alphabets)",
+                                   " lowercase (returns all alphabets in lowercase)",
+                                   " capitalize (converts first character to Capital Letter)",
+                                   " title case (returns a title cased string)",
+                                   " all alphabets (checks if all characters are alphabets)",
+                                   " all numbers (checks if all characters in a string are numeric characters)",
+                                   " all space (checks if there are only whitespace characters in the string)"],
+                          ),
+        ]
+        self.op = (inquirer.prompt(questions))
+        return self.op
 
 
-x = mod_str()
-x.operate()
+x = mod_str(5)
+o = str(x.ques()) # switcher takes immutable argument
+x.operate(o)
+
+def opp():
+    question = [
+        inquirer.List('answer',
+                      message="would you like to perform another operation?: ",
+                      choices=['yes', 'no'],
+                      ),
+    ]
+    a = inquirer.prompt(question)
+    if a=={'answer': 'no'} :
+        return None
+    if a =={'answer': 'yes'}:
+        o = str(x.ques())
+        x.operate(o)
+        opp()
+    elif a!= "yes" or a!= "no":
+        print("Invalid Input")
+        opp()
+
+
+opp()
