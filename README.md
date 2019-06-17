@@ -11,19 +11,19 @@ There will be thousands of products and HTML for each product we need to parse a
 ### Getting Started:
 You will need a GitHub Personal Auth Token to make requests to the GitHub API. This should be set in your environment or shell rc file with the name GITHUB_API_TOKEN:
 
-$ export GITHUB_API_TOKEN=XYZ
+`$ export GITHUB_API_TOKEN=XYZ
 
-$ echo "export GITHUB_API_TOKEN=XYZ" >> ~/.bashrc
+$ echo "export GITHUB_API_TOKEN=XYZ" >> ~/.bashrc`
 
-Additionally, to perform the labor hours estimation, you will need to install cloc into your environment. This is typically done with a Package Manager such as npm or homebrew.
+Additionally, to perform the labor hours estimation, you will need to install `cloc` into your environment. This is typically done with a Package Manager such as `npm` or `homebrew`.
 
-You will also need a config.json file to coordinate the platforms you will connect to and scrape data from. Once you have your config file, you are ready to install and run the scraper!
+You will also need a `config.json` file to coordinate the platforms you will connect to and scrape data from. Once you have your config file, you are ready to install and run the scraper!
 
 ### Install Scraper
-$ pip install -e .
+`$ pip install -e` .
 
 ### Run Scraper with your config file ``config.json``
-$ scraper --config config.json
+`$ scraper --config config.json`
 
 # Few Web Scraping frameworks and libraries are:
 
@@ -53,11 +53,11 @@ Scrapy is a web scraping framework written in Python which takes care of everyth
 ### Installation:
 To install Scrapy using conda run:
 
-conda install –c conda–forge scrapy
+`conda install –c conda–forge scrapy`
 
 Alternatively, if you are more familiar with the installation from PyPI, you can install using pip as :
 
-pip install Scrapy
+`pip install Scrapy`
 
 ## 2. Urllib
 It is a package with several modules for working with URLs (Uniform Resource Locators). It also offers a slightly more complex interface for handling common situations – like basic authentication, encoding, cookies, proxies and so on. These are provided by objects called handlers and openers.
@@ -100,11 +100,11 @@ Requests is the perfect example how beautiful an API can be with the right level
 ### Installation:
 You can install requests using conda as :
 
-conda install -c anaconda requests
+`conda install -c anaconda requests`
 
 and pip using:
 
-pip install requests
+`pip install requests`
 
 ## 4. Selenium – The automator
 Selenium is a tool automates browsers based on Java. But you can access it via the Python Package Selenium.  Though primarily used as a tool for writing automated tests for web applications, it has come to some heavy use for pages that have javascript on them.
@@ -123,11 +123,11 @@ Selenium is a tool automates browsers based on Java. But you can access it via t
 ### Installation:
 To install this package with conda run:
 
-conda install -c conda-forge selenium 
+`conda install -c conda-forge selenium` 
 
 Using pip, you can install by running the below on your terminal
 
-pip install selenium
+`pip install selenium`
 
 # The Parsers
 a. Beautiful Soup
@@ -153,11 +153,11 @@ Beautiful Soup (BS4) is a parsing library that can use different parsers. As we 
 ### Installation:
 To install this package with conda run:
 
-conda install -c anaconda beautifulsoup4 
+`conda install -c anaconda beautifulsoup4`
 
 Using pip, you can install using
 
-pip install beautifulsoup4
+`pip install beautifulsoup4`
 
 ## 6. LXML
 Lxml is a high-performance, production-quality HTML and XML parsing library.
@@ -173,8 +173,8 @@ Lxml is a high-performance, production-quality HTML and XML parsing library.
 With conda run, you can install using,
 To install this package with conda run:
 
-conda install -c anaconda lxml 
+`conda install -c anaconda lxml` 
 
 You can install using lxml directly using pip,
 
-sudo apt-get install python3-lxml
+`sudo apt-get install python3-lxml`
